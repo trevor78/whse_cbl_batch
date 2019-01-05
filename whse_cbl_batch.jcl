@@ -20,21 +20,21 @@
 //				WM.SP.DBA.PROCLIB,
 //				WM.PROCLIB,
 //				N01.&CC.FIN.JOB.RESOURCE,
-//				N01.Z4.SAMPLE)
+//				N01.Z4.STORELOC)
 //*
 //CA7DMY EXEC PGM=IEFBR14
 //******************************************************************************
 //* STEP01 - IEFBR14- DELETE WORK FILE										   
 //*----------------------------------------------------------------------------*
 //STEP01  EXEC PGM=IEFBR14
-//DD1	  DD DSN=N01.Z4.SAMPLE.OUT,DISP=(MOD,DELETE,DELETE),
+//DD1	  DD DSN=N01.Z4.STORELOC.OUT,DISP=(MOD,DELETE,DELETE),
 //		   SPACE=(0,0)
 //*----------------------------------------------------------------------------
 //STEP02   EXEC DB2TSOP,MBR=SAMPLE,
 //				JOB=DB2JCL,STEP=02,
 //				PLN=Z4BTCHSA, SYS=DSNT
-//INFILE 	DD DSN=N01.Z4.SAMPLE.IN,DISP=SHR
-//OUTPUT	DD DSN=N01.Z4.SAMPLE.OUT,DISP=(,CATLG,DELETE),
+//INFILE 	DD DSN=N01.Z4.STORELOC.IN,DISP=SHR
+//OUTPUT	DD DSN=N01.Z4.STORELOC.OUT,DISP=(,CATLG,DELETE),
 //			    LRECL=32,RECFM=FB,
 //			    SPACE=(CYL,(1200,500)),
 //			    DSORG=PS ,AVGREC=K
