@@ -28,8 +28,8 @@
           LABEL RECORDS ARE STANDARD
           RECORDING MODE IS F
           BLOCK CONTAINS 0 CHARACTERS.
-       01 INPUT-RECORD.
-          03 INPUT-LAYOUT                PIC X(32).
+       01 OUTPUT-RECORD.
+          03 OUTPUT-LAYOUT                PIC X(32).
 
        WORKING-STORAGE SECTION.
        01   PROGRAM-WORK-AREA.
